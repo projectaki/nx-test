@@ -49,7 +49,7 @@
             "tsConfig": "apps/palace/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["apps/palace/src/favicon.ico", "apps/palace/src/assets"],
-            "styles": ["apps/palace/src/styles.scss"],
+            "styles": ["./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css", "apps/palace/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
