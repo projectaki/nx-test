@@ -25,6 +25,9 @@
     "palace-e2e": {
       "tags": [],
       "implicitDependencies": ["palace"]
+    },
+    "auth": {
+      "tags": []
     }
   }
 }

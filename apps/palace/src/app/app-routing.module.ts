@@ -7,6 +7,7 @@ import { LayoutComponent } from './layout/layout.component';
 const routes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', redirectTo: '/home', pathMatch: 'full' },
   // { path: 'xxx/:id', component: AppComponent },
 ];
 

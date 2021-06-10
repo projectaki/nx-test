@@ -49,7 +49,10 @@
             "tsConfig": "apps/palace/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["apps/palace/src/favicon.ico", "apps/palace/src/assets"],
-            "styles": ["./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css", "apps/palace/src/styles.scss"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "apps/palace/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -144,6 +147,31 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/palace-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "auth": {
+      "projectType": "library",
+      "root": "libs/auth",
+      "sourceRoot": "libs/auth/src",
+      "prefix": "akosdev",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/auth"],
+          "options": {
+            "jestConfig": "libs/auth/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/auth/src/**/*.ts",
+              "libs/auth/src/**/*.html"
+            ]
           }
         }
       }
