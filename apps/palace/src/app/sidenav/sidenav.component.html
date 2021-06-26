@@ -1,8 +1,16 @@
 <mat-sidenav-container class="example-container" autosize>
   <mat-sidenav #sidenav mode="side" opened class="example-sidenav"
-  [fixedInViewport]="true" [fixedTopGap]="3*16"
+  [fixedInViewport]="true" [fixedTopGap]="60"
   [fixedBottomGap]="0" [opened]="true">
-Sidenav
+  <mat-selection-list #titlesList [multiple]="false">
+    <mat-list-option routerLink="/{{title.toLowerCase()}}" *ngFor="let title of titles" [value]="title">
+      {{title}}
+    </mat-list-option>
+  </mat-selection-list>
+  
+  <p>
+    Option selected: {{titlesList.selectedOptions.selected[0]?.value}}
+  </p>
 </mat-sidenav>
 
       <ng-content></ng-content>

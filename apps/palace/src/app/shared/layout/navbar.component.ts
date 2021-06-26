@@ -7,7 +7,7 @@ import { SidenavService } from '../../sidenav/sidenav.service';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  logo = 'assets/ferret.png';
+  logo = 'assets/ferret_small.ico';
 
   constructor(private sidenavService: SidenavService) {}
 

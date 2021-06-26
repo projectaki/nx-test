@@ -11,6 +11,8 @@ import { SidenavService } from './sidenav.service';
 export class SidenavComponent implements OnInit {
   @ViewChild('sidenav') sidenav: any;
 
+  titles = ['RxJS', 'Testing'];
+
   constructor(private sidenavService: SidenavService) {}
 
   ngOnInit(): void {}
