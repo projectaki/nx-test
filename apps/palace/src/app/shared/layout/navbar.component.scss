@@ -1,10 +1,18 @@
+.navbar {
+  position: fixed;
+}
+
+.mat-toolbar.mat-primary {
+  color: #fff;
+}
+
 .logo {
   width: 2.5em;
   margin-right: 1em;
 }
 
 .icon {
-  margin-right: 1em;
+  margin-right: 2em;
   font-size: 1.3em;
 }
 
@@ -15,4 +23,11 @@ button {
   cursor: pointer;
   overflow: hidden;
   outline: none;
+}
+
+.example-icon {
+}
+
+.example-spacer {
+  flex: 1 1 auto;
 }
