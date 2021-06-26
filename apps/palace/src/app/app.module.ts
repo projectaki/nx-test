@@ -31,7 +31,6 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     EffectsModule.forRoot([]),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
   ],
-  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
