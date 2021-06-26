@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SidenavService } from '../../sidenav/sidenav.service';
 
 @Component({
   selector: 'navbar',
@@ -8,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
   logo = 'assets/ferret.png';
 
-  constructor() {}
+  constructor(private sidenavService: SidenavService) {}
 
   ngOnInit(): void {}
+
+  toggleSideNav() {
+    this.sidenavService.toggle();
+  }
 }

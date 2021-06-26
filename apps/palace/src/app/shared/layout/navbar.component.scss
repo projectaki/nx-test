@@ -1,14 +1,16 @@
 .navbar {
   position: fixed;
-}
-
-.mat-toolbar.mat-primary {
-  color: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 3em;
 }
 
 .logo {
-  width: 2.5em;
+  height: 60%;
   margin-right: 1em;
+  margin-left: 1em;
 }
 
 .icon {
@@ -26,6 +28,7 @@ button {
 }
 
 .example-icon {
+  color: white;
 }
 
 .example-spacer {

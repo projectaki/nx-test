@@ -1,11 +1,12 @@
 <mat-toolbar color="primary" class="navbar">
+  <button *ngIf="true" (click)="toggleSideNav()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
     <img class="logo" src={{logo}}/>
      <span>Wezl</span>
      <span class="example-spacer"></span>
      <span>About</span>
   
-     <button *ngIf="false" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
+     
 </mat-toolbar>
 
