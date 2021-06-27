@@ -1,7 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  templateUrl: './home-page.component.html',
+  template: `<div class="home-page">
+    <img
+      class="home-logo"
+      src="/assets/ferret_white_outline.png"
+      alt="ferret"
+    />
+  </div>`,
   styleUrls: ['./home-page.component.scss'],
 })
 export class HomePageComponent implements OnInit {

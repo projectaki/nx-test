@@ -1,19 +1,34 @@
-import { Component, OnInit } from '@angular/core';
-import { SidenavService } from '../sidenav/sidenav.service';
+import { Component, OnInit, Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'navbar',
-  templateUrl: './navbar.component.html',
+  template: `<mat-toolbar color="primary" class="navbar">
+    <button
+      *ngIf="true"
+      (click)="toggleSideNav()"
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <img routerLink="/home" class="logo" src="{{ logo }}" />
+    <span>Wezl</span>
+    <span class="example-spacer"></span>
+    <span>About</span>
+  </mat-toolbar> `,
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
   logo = 'assets/ferret_small.ico';
+  @Output() toggleSidenav = new EventEmitter<void>();
 
-  constructor(private sidenavService: SidenavService) {}
+  constructor() {}
 
   ngOnInit(): void {}
 
   toggleSideNav() {
-    this.sidenavService.toggle();
+    this.toggleSidenav.emit();
   }
 }

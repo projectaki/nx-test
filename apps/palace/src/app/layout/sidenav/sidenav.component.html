@@ -1,23 +1,24 @@
-<mat-sidenav-container class="example-container" autosize>
-  <mat-sidenav #sidenav mode="side" opened class="example-sidenav"
+<navbar (toggleSidenav)="sidenav.toggle()"></navbar>
+<mat-sidenav-container class="content-container">
+  
+  <mat-sidenav #sidenav mode="side" opened class="sidenav"
   [fixedInViewport]="true"
-  [fixedTopGap]="60"
-  [fixedBottomGap]="0"
+  [fixedTopGap]="heightOfNavbar"
   [opened]="!isScreenSmall"
   [mode]="isScreenSmall ? 'over' : 'side'"
    >
-  <mat-selection-list #titlesList [multiple]="false">
-    <mat-list-option routerLink="/{{title.toLowerCase()}}" *ngFor="let title of titles" [value]="title">
-      {{title}}
-    </mat-list-option>
-  </mat-selection-list>
-  
-  <p>
-    Option selected: {{titlesList.selectedOptions.selected[0]?.value}}
-  </p>
+
+    <mat-selection-list #titlesList [multiple]="false">
+      <mat-list-option routerLink="/{{title.toLowerCase()}}" *ngFor="let title of titles" [value]="title">
+        {{title}}
+      </mat-list-option>
+    </mat-selection-list>
+    
+    <p>
+      Option selected: {{titlesList.selectedOptions.selected[0]?.value}}
+    </p>
 </mat-sidenav>
 
-      <ng-content></ng-content>
-    
-  
+<ng-content></ng-content>
+
   </mat-sidenav-container>

@@ -4,7 +4,6 @@ import {
   Breakpoints,
   BreakpointState,
 } from '@angular/cdk/layout';
-import { SidenavService } from './sidenav.service';
 
 @Component({
   selector: 'sidenav',
@@ -12,15 +11,11 @@ import { SidenavService } from './sidenav.service';
   styleUrls: ['./sidenav.component.scss'],
 })
 export class SidenavComponent implements OnInit {
-  @ViewChild('sidenav') sidenav: any;
-
-  titles = ['RxJS', 'Testing'];
   public isScreenSmall!: boolean;
+  titles = ['RxJS', 'Testing'];
+  heightOfNavbar = 60;
 
-  constructor(
-    private sidenavService: SidenavService,
-    private breakPoinbObserver: BreakpointObserver
-  ) {}
+  constructor(private breakPoinbObserver: BreakpointObserver) {}
 
   ngOnInit(): void {
     this.breakPoinbObserver
@@ -29,9 +24,5 @@ export class SidenavComponent implements OnInit {
       .subscribe(
         (state: BreakpointState) => (this.isScreenSmall = state.matches)
       );
-  }
-
-  ngAfterViewInit() {
-    this.sidenavService.setSidenav(this.sidenav);
   }
 }
