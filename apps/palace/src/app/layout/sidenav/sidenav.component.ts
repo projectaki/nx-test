@@ -4,6 +4,8 @@ import {
   Breakpoints,
   BreakpointState,
 } from '@angular/cdk/layout';
+import { ActivatedRoute } from '@angular/router';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'sidenav',
@@ -11,6 +13,7 @@ import {
   styleUrls: ['./sidenav.component.scss'],
 })
 export class SidenavComponent implements OnInit {
+  @ViewChild('sidenav') sidenav!: MatSidenav;
   public isScreenSmall!: boolean;
   titles = ['RxJS', 'Testing'];
   heightOfNavbar = 60;

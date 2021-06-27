@@ -8,15 +8,18 @@
   [mode]="isScreenSmall ? 'over' : 'side'"
    >
 
-    <mat-selection-list #titlesList [multiple]="false">
-      <mat-list-option routerLink="/{{title.toLowerCase()}}" *ngFor="let title of titles" [value]="title">
-        {{title}}
-      </mat-list-option>
-    </mat-selection-list>
-    
-    <p>
-      Option selected: {{titlesList.selectedOptions.selected[0]?.value}}
-    </p>
+    <mat-nav-list>
+      <mat-list-item *ngFor="let title of titles"
+       routerLinkActive="active-link"
+       routerLink="/{{title.toLowerCase()}}"
+       (click)="isScreenSmall && sidenav.close()"
+       >
+      
+      {{title}}
+       
+      </mat-list-item>
+    </mat-nav-list>
+
 </mat-sidenav>
 
 <ng-content></ng-content>
