@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~highlight.js/styles/tomorrow-night.css';
+@import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+
 html,
 body {
   height: 100%;
@@ -10,10 +11,10 @@ body {
   font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 
-// pre {
-//   box-shadow: 0 0 5px 1px black;
-//   width: 500px;
-//   margin: 10px;
-//   padding: 10px;
-//   background-color: rgb(20, 20, 20);
-// }
+pre {
+  box-shadow: 0 0 5px 1px black;
+  width: 500px;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(20, 20, 20);
+}

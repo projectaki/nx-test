@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomePageComponent } from './home/home-page.component';
-import { RxjsPageComponent } from './rxjs/rxjs-page/rxjs-page.component';
 import { RxjsModule } from './rxjs/rxjs.module';
 
 const routes: Routes = [
-  { path: 'home', component: HomePageComponent },
-  { path: 'rxjs', component: RxjsPageComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', redirectTo: '/home', pathMatch: 'full' },
-
-  // { path: 'xxx/:id', component: AppComponent },
+  {
+    path: '',
+    loadChildren: () =>
+      import('./layout/layout.module').then((m) => m.LayoutModule),
+  },
+  {
+    path: 'rxjs',
+    loadChildren: () => import('./rxjs/rxjs.module').then((m) => m.RxjsModule),
+  },
+  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({

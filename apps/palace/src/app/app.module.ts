@@ -9,10 +9,9 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { SharedModule } from './shared/shared.module';
-import { SidenavComponent } from './sidenav/sidenav.component';
 
 @NgModule({
-  declarations: [AppComponent, HomePageComponent, SidenavComponent],
+  declarations: [AppComponent, HomePageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

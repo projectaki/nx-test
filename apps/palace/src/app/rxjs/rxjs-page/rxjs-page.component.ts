@@ -1,5 +1,4 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 @Component({
   templateUrl: './rxjs-page.component.html',
