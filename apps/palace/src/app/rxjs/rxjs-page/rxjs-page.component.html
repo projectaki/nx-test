@@ -2,4 +2,11 @@
     <pre>
         <code>{{code}}</code>
     </pre>
+    <button (click)="addEntity()">add</button>
+<button (click)="editEntity()">edit</button>
+<button (click)="removeEntity()">remove</button>
+<pre>
+    {{(stateService.numbers$ | async) | json}}
+</pre>
 </div>
+

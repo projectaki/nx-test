@@ -8,6 +8,7 @@ import { LayoutComponent } from './layout.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from '../home/home-page.component';
 import { RxjsPageComponent } from '../rxjs/rxjs-page/rxjs-page.component';
+import { TestingPageComponent } from '../testing/testing-page/testing-page.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,7 @@ const routes: Routes = [
     children: [
       { path: '', component: HomePageComponent },
       { path: 'rxjs', component: RxjsPageComponent },
+      { path: 'testing', component: TestingPageComponent },
     ],
   },
   { path: '**', redirectTo: '' },

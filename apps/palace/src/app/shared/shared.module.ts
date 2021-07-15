@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [],
@@ -18,6 +19,7 @@ import { RouterModule } from '@angular/router';
     MatSidenavModule,
     MatListModule,
     RouterModule,
+    MatCardModule,
   ],
 })
 export class SharedModule {}
